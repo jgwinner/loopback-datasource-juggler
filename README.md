@@ -2,6 +2,12 @@
 
 An ORM/ODM that provides a common set of interfaces for interacting with databases, REST APIs, and other types of data sources. It was originally forked from [JugglingDB](https://github.com/1602/jugglingdb).
 
+## Fork by John Gwinner
+
+When using a GUID, the current Loopback-datasource-juggler makes the UUID be a text string. This impacts indexing in a database as well as data storage. I made a fairly simple modification that preserves the UUID as a BINARY(16) value.
+
+See model.js, lines 310
+
 ## Supported versions
 
 This module adopts the [Module Long Term Support (LTS)](http://github.com/CloudNativeJS/ModuleLTS) policy, with the following End Of Life (EOL) dates:
